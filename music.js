@@ -88,4 +88,7 @@ music.addEventListener('timeupdate',(event)=>{
         }
     }
     progress.style.width=`${currentTime/duration*100}%`
+    if(Math.floor(currentTime)==Math.floor(duration)){
+        nextSong();
+    }
 })
