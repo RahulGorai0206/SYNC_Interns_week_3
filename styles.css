@@ -22,44 +22,59 @@ body{
 .main .music-card{
     border-radius: 50px;
     box-shadow: 5px 5px 10px #7a7a7a, -5px -5px 10px #fbf9d9;
-    padding: 25px 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 25%;
+    background-color: #DAE5F7;
+    color: white;
 }
-.main .music-card #title{
+.empty{
+    border-radius: 50px;
+    padding: 25px 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #8d6df8;
+}
+.main .music-card .empty #title{
     text-transform: uppercase;
     font-size: 40px;
     font-weight: 500;
     margin: 15px 0px;
 }
-.main .music-card #artist{
+.main .music-card .empty #artist{
     text-transform: uppercase;
     font-size: 25px;
     opacity: 30%;
+    margin-bottom: 30px;
 }
-.main .music-card .song-logo{
-    box-shadow: 5px 5px 10px #7a7a7a, -5px -5px 10px #fbf9d9;
+.main .music-card .empty .song-logo{
+    box-shadow: 5px 5px 10px #533e9b, -5px -5px 10px #4e3896;
     overflow: hidden;
     width: 250px;
     height: 250px;
     border-radius: 50%;
     margin: 20px 0px;
+    border: 15px solid white;
 }
-.main .music-card .song-logo img{
+.main .music-card .empty .song-logo img{
     width: 100%;
     height: 100%;
 }
 .main .music-card .music-controls{
-    margin: 20px 0px;
-    padding: 10px 0px;
+    padding: 15px 35px;
+    margin: 0px 0px;
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 30px;
     cursor: pointer;
+    color: #8d6df8;
 }
 .main .music-card .music-controls i{
     justify-content: center;
@@ -77,15 +92,15 @@ body{
 }
 .progress-container{
     width: 100%;
-    padding: 10px 0px;
-    margin-top: 10px;
+    padding: 15px 35px;
+    color: #787474;
 }
 .progress-div{
     width: 100%;
-    background-color: rgb(221, 223, 158);
+    background-color: #C0DAED;
     height: 5px;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-bottom: 20px;
     position: relative;
     cursor: pointer;
 }
@@ -94,11 +109,12 @@ body{
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #000000;
-    width: 50%;
+    background-color: #8d6df8;
+    width: 0%;
     border-radius: 5px;
 }
 .progress-time{
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;

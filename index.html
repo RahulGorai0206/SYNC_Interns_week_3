@@ -10,12 +10,21 @@
 <body onload="autoFetch()">
     <div class="main">
         <div class="music-card">
-            <h2 id="title"></h2>
-            <p id="artist"></p>
-            <div class="song-logo">
-                <img src="" id="songImage">
+            <div class="empty">
+                <h2 id="titl">NOW PLAYING</h2>
+                <div class="song-logo">
+                    <img src="" id="songImage">
+                </div>
+                <h2 id="title"></h2>
+                <p id="artist"></p>
+                <audio src=""></audio>
             </div>
-            <audio src=""></audio>
+            <div class="music-controls">
+                <i class="fa-solid fa-backward" id="prev" title="Previous"></i>
+                <i class="fa-solid fa-play" id="play" title="Play"></i>
+                <i class="fa-solid fa-pause" id="pause" title="pause" style="display: none;"></i>
+                <i class="fa-solid fa-forward" id="next" title="Next"></i>
+            </div>
             <div class="progress-container" id="progress-container">
                 <div class="progress-time">
                     <div id="current-time">0:00</div>
@@ -24,12 +33,6 @@
                 <div class="progress-div">
                     <div class="progress"></div>
                 </div>
-            </div>
-            <div class="music-controls">
-                <i class="fa-solid fa-backward" id="prev" title="Previous"></i>
-                <i class="fa-solid fa-play" id="play" title="Play"></i>
-                <i class="fa-solid fa-pause" id="pause" title="pause" style="display: none;"></i>
-                <i class="fa-solid fa-forward" id="next" title="Next"></i>
             </div>
         </div>
     </div>
