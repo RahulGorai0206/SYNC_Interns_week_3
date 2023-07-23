@@ -7,6 +7,9 @@ const songImage=document.querySelector('#songImage');
 const artist=document.querySelector('#artist');
 const title=document.querySelector('#title');
 const ind=document.querySelector('#ind');
+const CurrenTime=document.querySelector('#current-time');
+const Duration=document.querySelector('#duration');
+const progress=document.querySelector('.progress');
 
 let prevSongArray=new Array();
 const url = "https://raw.githubusercontent.com/RahulGorai0206/songs/main/song.json";
@@ -69,3 +72,20 @@ next.addEventListener("click",()=>{
 prev.addEventListener("click",()=>{
     prevSong();
 });
+
+music.addEventListener('timeupdate',(event)=>{
+    const {currentTime, duration}=event.target;
+    if(currentTime<10){
+        CurrenTime.textContent=Math.floor(currentTime/60)+":0"+Math.floor(currentTime%60);
+    }else{
+        CurrenTime.textContent=Math.floor(currentTime/60)+":"+Math.floor(currentTime%60);
+    }
+    if(duration){
+        if(duration%60<10){
+            Duration.textContent=Math.floor(duration/60)+":0"+Math.floor(duration%60);
+        }else{
+            Duration.textContent=Math.floor(duration/60)+":"+Math.floor(duration%60);
+        }
+    }
+    progress.style.width=`${currentTime/duration*100}%`
+})
