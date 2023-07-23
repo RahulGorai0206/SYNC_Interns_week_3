@@ -7,6 +7,10 @@
     font-family: 'Encode Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    overflow: hidden;
+    user-select: none;
+}
 .main{
     width: 100vw;
     height: 100vh;
@@ -71,3 +75,15 @@
     color: antiquewhite;
     background-color: black;
 }
+@media only screen and (max-width: 600px) {
+    .main .music-card{
+        width: 90vw;
+    }
+    .main .music-card #title{
+        text-align: center;
+        font-size: 30px;
+    }
+    .main .music-card #artist{
+        font-size: 15px;
+    }
+  }
