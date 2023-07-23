@@ -10,6 +10,7 @@ const ind=document.querySelector('#ind');
 const CurrenTime=document.querySelector('#current-time');
 const Duration=document.querySelector('#duration');
 const progress=document.querySelector('.progress');
+const progressDiv=document.querySelector('.progress-div');
 
 let prevSongArray=new Array();
 const url = "https://raw.githubusercontent.com/RahulGorai0206/songs/main/song.json";
@@ -91,4 +92,8 @@ music.addEventListener('timeupdate',(event)=>{
     if(Math.floor(currentTime)==Math.floor(duration)){
         nextSong();
     }
+})
+progressDiv.addEventListener('click',(event)=>{
+    const dura=music.duration;
+    music.currentTime=(event.offsetX/event.target.clientWidth)*dura
 })

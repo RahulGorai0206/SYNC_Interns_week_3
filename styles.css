@@ -87,6 +87,7 @@ body{
     border-radius: 5px;
     margin-top: 10px;
     position: relative;
+    cursor: pointer;
 }
 .progress{
     position: absolute;
