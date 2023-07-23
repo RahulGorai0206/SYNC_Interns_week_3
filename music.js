@@ -76,7 +76,7 @@ prev.addEventListener("click",()=>{
 
 music.addEventListener('timeupdate',(event)=>{
     const {currentTime, duration}=event.target;
-    if(currentTime<10){
+    if(currentTime%60<10){
         CurrenTime.textContent=Math.floor(currentTime/60)+":0"+Math.floor(currentTime%60);
     }else{
         CurrenTime.textContent=Math.floor(currentTime/60)+":"+Math.floor(currentTime%60);
