@@ -10,7 +10,7 @@ const ind=document.querySelector('#ind');
 const CurrenTime=document.querySelector('#current-time');
 const Duration=document.querySelector('#duration');
 const progress=document.querySelector('.progress');
-const progressDiv=document.querySelector('.progress-div');
+const progressDiv=document.querySelector('#progress-div');
 
 let prevSongArray=new Array();
 const url = "https://raw.githubusercontent.com/RahulGorai0206/songs/main/song.json";
