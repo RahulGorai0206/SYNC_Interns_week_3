@@ -55,7 +55,7 @@ async function prevSong(){
         music.src="https://raw.githubusercontent.com/RahulGorai0206/songs/main/music/1.mp3";
     }
     playMusic();
-    setDetails(objectOfObject);
+    setDetails(objectOfObject,x-1);
 }
 play.addEventListener("click",()=>{
     playMusic();
