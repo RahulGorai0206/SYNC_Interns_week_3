@@ -128,11 +128,19 @@ body{
     .main .music-card{
         width: 90vw;
     }
-    .main .music-card #title{
+    .main .music-card .empty  #title{
         text-align: center;
-        font-size: 30px;
+        font-size: 20px;
     }
-    .main .music-card #artist{
+    .main .music-card .empty  #artist{
         font-size: 15px;
+        margin-bottom: 0px;
     }
+    .main .music-card .music-controls i{
+        width: 50px;
+        height: 50px;
   }
+  .main .music-card .music-controls{
+    font-size: 20px;
+  }
+}
