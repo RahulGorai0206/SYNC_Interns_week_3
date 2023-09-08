@@ -55,11 +55,12 @@ async function prevSong(){
     if(prevSongArray.length>1){
         music.src="https://raw.githubusercontent.com/RahulGorai0206/songs/main/music/"+prevSongArray[prevSongArray.length-2]+".mp3";
         prevSongArray.pop(prevSongArray.length)
+        setDetails(objectOfObject,prevSongArray[prevSongArray.length-2]);
+        playMusic();
     }else{
         music.src="https://raw.githubusercontent.com/RahulGorai0206/songs/main/music/1.mp3";
+        playMusic();
     }
-    playMusic();
-    setDetails(objectOfObject,x-1);
 }
 play.addEventListener("click",()=>{
     playMusic();
